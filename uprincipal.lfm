@@ -1,0 +1,100 @@
+object Form1: TForm1
+  Left = 143
+  Height = 696
+  Top = 181
+  Width = 1001
+  Caption = 'Form1'
+  ClientHeight = 696
+  ClientWidth = 1001
+  LCLVersion = '2.0.0.4'
+  object edtHost: TEdit
+    Left = 552
+    Height = 37
+    Top = 96
+    Width = 384
+    TabOrder = 0
+  end
+  object edtDatabase: TEdit
+    Left = 552
+    Height = 37
+    Top = 168
+    Width = 384
+    TabOrder = 1
+  end
+  object edtUsuario: TEdit
+    Left = 552
+    Height = 37
+    Top = 240
+    Width = 384
+    TabOrder = 2
+  end
+  object edtSenha: TEdit
+    Left = 552
+    Height = 37
+    Top = 312
+    Width = 384
+    TabOrder = 3
+  end
+  object lblDatabase: TLabel
+    Left = 552
+    Height = 17
+    Top = 144
+    Width = 62
+    Caption = 'Database'
+    ParentColor = False
+  end
+  object lblHost1: TLabel
+    Left = 588
+    Height = 17
+    Top = 102
+    Width = 30
+    Caption = 'Host'
+    ParentColor = False
+  end
+  object lblHost: TLabel
+    Left = 552
+    Height = 17
+    Top = 74
+    Width = 30
+    Caption = 'Host'
+    ParentColor = False
+  end
+  object lblUsuario: TLabel
+    Left = 552
+    Height = 17
+    Top = 216
+    Width = 50
+    Caption = 'Usuário'
+    ParentColor = False
+  end
+  object lblSenha: TLabel
+    Left = 552
+    Height = 17
+    Top = 288
+    Width = 40
+    Caption = 'Senha'
+    ParentColor = False
+  end
+  object btnConectar: TButton
+    Left = 840
+    Height = 30
+    Top = 368
+    Width = 96
+    Caption = 'Conectar'
+    OnClick = btnConectarClick
+    TabOrder = 4
+  end
+  object SQLConnector1: TSQLConnector
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = False
+    ConnectorType = 'PostgreSQL'
+    left = 632
+    top = 32
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    left = 584
+    top = 32
+  end
+end
