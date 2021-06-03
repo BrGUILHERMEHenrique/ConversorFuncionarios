@@ -1,88 +1,124 @@
 object Form1: TForm1
-  Left = 143
+  Left = 213
   Height = 696
-  Top = 181
+  Top = 174
   Width = 1001
   Caption = 'Form1'
   ClientHeight = 696
   ClientWidth = 1001
   LCLVersion = '2.0.0.4'
   object edtHost: TEdit
-    Left = 552
+    Left = 544
     Height = 37
-    Top = 96
+    Top = 118
     Width = 384
     TabOrder = 0
   end
   object edtDatabase: TEdit
-    Left = 552
+    Left = 544
     Height = 37
-    Top = 168
+    Top = 190
     Width = 384
     TabOrder = 1
   end
   object edtUsuario: TEdit
-    Left = 552
+    Left = 544
     Height = 37
-    Top = 240
+    Top = 262
     Width = 384
     TabOrder = 2
   end
   object edtSenha: TEdit
-    Left = 552
+    Left = 544
     Height = 37
-    Top = 312
+    Top = 334
     Width = 384
     TabOrder = 3
   end
   object lblDatabase: TLabel
-    Left = 552
+    Left = 544
     Height = 17
-    Top = 144
+    Top = 166
     Width = 62
     Caption = 'Database'
     ParentColor = False
   end
   object lblHost1: TLabel
-    Left = 588
+    Left = 580
     Height = 17
-    Top = 102
+    Top = 124
     Width = 30
     Caption = 'Host'
     ParentColor = False
   end
   object lblHost: TLabel
-    Left = 552
+    Left = 544
     Height = 17
-    Top = 74
+    Top = 96
     Width = 30
     Caption = 'Host'
     ParentColor = False
   end
   object lblUsuario: TLabel
-    Left = 552
+    Left = 544
     Height = 17
-    Top = 216
+    Top = 238
     Width = 50
     Caption = 'Usuário'
     ParentColor = False
   end
   object lblSenha: TLabel
-    Left = 552
+    Left = 544
     Height = 17
-    Top = 288
+    Top = 310
     Width = 40
     Caption = 'Senha'
     ParentColor = False
   end
   object btnConectar: TButton
-    Left = 840
+    Left = 832
     Height = 30
-    Top = 368
+    Top = 390
     Width = 96
     Caption = 'Conectar'
+    Enabled = False
     OnClick = btnConectarClick
     TabOrder = 4
+  end
+  object edtArquivo: TEdit
+    Left = 56
+    Height = 37
+    Top = 118
+    Width = 264
+    TabOrder = 5
+  end
+  object btnArquivo: TButton
+    Left = 336
+    Height = 37
+    Top = 118
+    Width = 112
+    Caption = 'Pesquisar'
+    OnClick = btnArquivoClick
+    TabOrder = 6
+  end
+  object btnAnvancar: TButton
+    Left = 864
+    Height = 49
+    Top = 640
+    Width = 120
+    Caption = 'Avançar'
+    OnClick = btnAnvancarClick
+    TabOrder = 7
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Height = 384
+    Top = 232
+    Width = 520
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource1
+    TabOrder = 8
   end
   object SQLConnector1: TSQLConnector
     Connected = False
@@ -96,5 +132,79 @@ object Form1: TForm1
     Active = False
     left = 584
     top = 32
+  end
+  object openArquivo: TOpenDialog
+    left = 47
+    top = 79
+  end
+  object DataSource1: TDataSource
+    DataSet = BufDataset1
+    left = 56
+    top = 41
+  end
+  object BufDataset1: TBufDataset
+    FieldDefs = <>
+    left = 104
+    top = 41
+    object BufDataset1id: TAutoIncField
+      FieldKind = fkData
+      FieldName = 'id'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object BufDataset1nmFuncionario: TStringField
+      FieldKind = fkData
+      FieldName = 'nmFuncionario'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+    object BufDataset1cpf: TStringField
+      FieldKind = fkData
+      FieldName = 'cpf'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 11
+    end
+    object BufDataset1salario: TFloatField
+      FieldKind = fkData
+      FieldName = 'salario'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+    end
+    object BufDataset1funcao: TStringField
+      FieldKind = fkData
+      FieldName = 'funcao'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+    object BufDataset1estadoCivil: TStringField
+      FieldKind = fkData
+      FieldName = 'estadoCivil'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
   end
 end
