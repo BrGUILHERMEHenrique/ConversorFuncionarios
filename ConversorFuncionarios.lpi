@@ -33,7 +33,7 @@
         <PackageName Value="LCL"/>
       </Item2>
     </RequiredPackages>
-    <Units Count="2">
+    <Units Count="5">
       <Unit0>
         <Filename Value="ConversorFuncionarios.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -42,9 +42,24 @@
         <Filename Value="uprincipal.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uPrincipal"/>
       </Unit1>
+      <Unit2>
+        <Filename Value="src/Exportador/uexportador.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="src/Classes/ufuncionario_imp.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uFuncionario_imp"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="src/Classes/udependente_imp.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uDependente_imp"/>
+      </Unit4>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -54,6 +69,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="src/Exportador;src/Classes"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>

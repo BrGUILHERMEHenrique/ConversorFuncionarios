@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 213
+  Left = 237
   Height = 696
-  Top = 174
+  Top = 167
   Width = 1001
   Caption = 'Form1'
   ClientHeight = 696
@@ -63,7 +63,7 @@ object Form1: TForm1
     Left = 544
     Height = 17
     Top = 238
-    Width = 50
+    Width = 51
     Caption = 'Usuário'
     ParentColor = False
   end
@@ -120,6 +120,15 @@ object Form1: TForm1
     DataSource = DataSource1
     TabOrder = 8
   end
+  object Button1: TButton
+    Left = 20
+    Height = 25
+    Top = 630
+    Width = 75
+    Caption = 'Dependentes'
+    OnClick = Button1Click
+    TabOrder = 9
+  end
   object SQLConnector1: TSQLConnector
     Connected = False
     LoginPrompt = False
@@ -138,15 +147,15 @@ object Form1: TForm1
     top = 79
   end
   object DataSource1: TDataSource
-    DataSet = BufDataset1
+    DataSet = bdsFuncionarios
     left = 56
     top = 41
   end
-  object BufDataset1: TBufDataset
+  object bdsFuncionarios: TBufDataset
     FieldDefs = <>
     left = 104
     top = 41
-    object BufDataset1id: TAutoIncField
+    object bdsFuncionariosid: TAutoIncField
       FieldKind = fkData
       FieldName = 'id'
       Index = 0
@@ -155,7 +164,7 @@ object Form1: TForm1
       ReadOnly = False
       Required = False
     end
-    object BufDataset1nmFuncionario: TStringField
+    object bdsFuncionariosnmFuncionario: TStringField
       FieldKind = fkData
       FieldName = 'nmFuncionario'
       Index = 1
@@ -165,7 +174,7 @@ object Form1: TForm1
       Required = False
       Size = 100
     end
-    object BufDataset1cpf: TStringField
+    object bdsFuncionarioscpf: TStringField
       FieldKind = fkData
       FieldName = 'cpf'
       Index = 2
@@ -175,7 +184,7 @@ object Form1: TForm1
       Required = False
       Size = 11
     end
-    object BufDataset1salario: TFloatField
+    object bdsFuncionariossalario: TFloatField
       FieldKind = fkData
       FieldName = 'salario'
       Index = 3
@@ -186,7 +195,7 @@ object Form1: TForm1
       MaxValue = 0
       MinValue = 0
     end
-    object BufDataset1funcao: TStringField
+    object bdsFuncionariosfuncao: TStringField
       FieldKind = fkData
       FieldName = 'funcao'
       Index = 4
@@ -196,7 +205,7 @@ object Form1: TForm1
       Required = False
       Size = 100
     end
-    object BufDataset1estadoCivil: TStringField
+    object bdsFuncionariosestadoCivil: TStringField
       FieldKind = fkData
       FieldName = 'estadoCivil'
       Index = 5
@@ -205,6 +214,67 @@ object Form1: TForm1
       ReadOnly = False
       Required = False
       Size = 1
+    end
+  end
+  object bdsDependentes: TBufDataset
+    FieldDefs = <>
+    left = 160
+    top = 41
+    object bdsDependentesid: TAutoIncField
+      FieldKind = fkData
+      FieldName = 'id'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object bdsDependentesfuncionario_id: TLongintField
+      FieldKind = fkData
+      FieldName = 'funcionario_id'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object bdsDependentesnmDependente: TStringField
+      FieldKind = fkData
+      FieldName = 'nmDependente'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 150
+    end
+    object bdsDependentescpf: TStringField
+      FieldKind = fkData
+      FieldName = 'cpf'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object bdsDependentesparentesco: TStringField
+      FieldKind = fkData
+      FieldName = 'parentesco'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object bdsDependentesdtnascimento: TDateField
+      FieldKind = fkData
+      FieldName = 'dtnascimento'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
     end
   end
 end
